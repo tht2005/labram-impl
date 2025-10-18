@@ -101,9 +101,9 @@ def vq_neural_spectrum_prediction_train(eeg_patch_list):
 
             scheduler.step()
 
-if __name__ == "__main__":
+def main():
     eeg_raw_list = get_raw_eeg_data()
     eeg_patch_list = patch(eeg_raw_list)
     model = vq_neural_spectrum_prediction_train(eeg_patch_list)
-    # torch.save(model.state_dict(), "spectrum_pred_model_weights.pth")
+    torch.save(model.state_dict(), "spectrum_pred_model_weights.pth")
 
