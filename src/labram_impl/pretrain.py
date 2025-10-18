@@ -1,6 +1,7 @@
 from .config import BATCH_SIZE, PATCH_s, PATCH_t, PATCH_w
 from .config import d_embd, d_codebook
 from .config import DATA_DIR
+from .config import SPECTRUM_PRED_MODEL_WEIGHT_FILE
 
 import torch
 import torch.optim as optim
@@ -107,5 +108,5 @@ def main():
     eeg_raw_list = get_raw_eeg_data()
     eeg_patch_list = patch(eeg_raw_list)
     model = vq_neural_spectrum_prediction_train(eeg_patch_list)
-    torch.save(model.state_dict(), "spectrum_pred_model_weights.pth")
+    torch.save(model.state_dict(), SPECTRUM_PRED_MODEL_WEIGHT_FILE)
 

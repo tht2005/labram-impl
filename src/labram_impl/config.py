@@ -14,3 +14,5 @@ assert PATCH_w % 8 == 0
 
 d_embd = PATCH_w
 d_codebook = 8192
+
+SPECTRUM_PRED_MODEL_WEIGHT_FILE = 'spectrum_pred_model_weights.pth'
