@@ -1,0 +1,24 @@
+[project]
+name = "labram-impl"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Nguyen Dinh Dang Duong",email = "dangduong31205@gmail.com"}
+]
+readme = "README.md"
+# requires-python = ">=3.13"
+requires-python = ">=3.13,<3.15"
+dependencies = [
+    "mne (>=1.10.2,<2.0.0)",
+    "numpy (>=2.3.4,<3.0.0)",
+    "matplotlib (>=3.10.7,<4.0.0)",
+    "pygobject (>=3.54.3,<4.0.0)",
+    "torch (>=2.9,<3.0)",
+]
+
+[tool.poetry]
+packages = [{include = "labram_impl", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
