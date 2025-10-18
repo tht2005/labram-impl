@@ -101,6 +101,8 @@ def vq_neural_spectrum_prediction_train(eeg_patch_list):
 
             scheduler.step()
 
+    return model
+
 def main():
     eeg_raw_list = get_raw_eeg_data()
     eeg_patch_list = patch(eeg_raw_list)
