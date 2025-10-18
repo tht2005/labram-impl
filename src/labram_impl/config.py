@@ -1,4 +1,7 @@
 import glob
+import torch
+
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # TODO
 DATA_DIR = glob.glob('./data/OpenMIIR-RawEEG_v1/*.fif')

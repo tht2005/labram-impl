@@ -2,6 +2,7 @@ from .config import BATCH_SIZE, PATCH_s, PATCH_t, PATCH_w
 from .config import d_embd, d_codebook
 from .config import DATA_DIR
 from .config import SPECTRUM_PRED_MODEL_WEIGHT_FILE
+from .config import DEVICE
 
 import torch
 import torch.optim as optim
@@ -54,8 +55,7 @@ def vq_neural_spectrum_prediction_train(eeg_patch_list):
     data_stride = 200
 
     model = NeuralTokenizerTrainer(BATCH_SIZE, d_embd, d_codebook)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = model.to(device)
+    model = model.to(DEVICE)
 
     optimizer = optim.AdamW(
         model.parameters(),

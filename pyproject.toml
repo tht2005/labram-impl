@@ -6,7 +6,7 @@ authors = [
     {name = "Nguyen Dinh Dang Duong",email = "dangduong31205@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.12,<3.15"
+requires-python = ">=3.11,<3.15"
 dependencies = [
     "mne (>=1.10.2,<2.0.0)",
     "numpy (>=2.3.4,<3.0.0)",
